@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Smart Hydroponic</string>
+    <string name="devices_status">Devices Status</string>
+    <string name="water_pump">Water Pump</string>
+    <string name="mix_pump">Mix Pump</string>
+    <string name="water_heater">Water Heater</string>
+    <string name="cooling_fan">Cooling Fan</string>
+    <string name="phup">pH Up</string>
+    <string name="phdown">pH Down</string>
+    <string name="ph_conditioner">pH Conditioner</string>
+    <string name="nutri_conditioner">Nutri Conditioner</string>
+    <string name="nutriup">Nutri Up</string>
+    <string name="nutridown">Nutri Down</string>
+    <string name="current_condition">Current Condition : </string>
+    <string name="temperature">Temperature</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="toolsTempt">28</string>
+    <string name="toolsC">^C</string>
+    <string name="toolsPpm">ppm</string>
+    <string name="toolsNutri">1500</string>
+    <string name="toolsPh">7.5</string>
+    <string name="ph_meter">pH Meter</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="up">Up</string>
+    <string name="down">Down</string>
+    <string name="pump">Pump</string>
+    <string name="ph">pH</string>
+    <string name="command">Command</string>
+
+
+</resources>

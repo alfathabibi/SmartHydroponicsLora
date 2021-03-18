@@ -2,14 +2,14 @@ package org.d2e.smarthydroponic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_nutrition.*
+import kotlinx.android.synthetic.main.activity_ph.*
 
-class NutritionActivity : AppCompatActivity() {
+class PhActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nutrition)
+        setContentView(R.layout.activity_ph)
 
-        ivBackNutrition.setOnClickListener {
+        ivBackPh.setOnClickListener {
             finish()
         }
     }

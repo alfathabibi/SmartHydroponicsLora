@@ -15,5 +15,17 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        cvSetNutrition.setOnClickListener {
+            Intent(this, NutritionActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        cvSetPh.setOnClickListener {
+            Intent(this, PhActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 }

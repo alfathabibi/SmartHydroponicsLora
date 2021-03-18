@@ -27,6 +27,11 @@
     <string name="pump">Pump</string>
     <string name="ph">pH</string>
     <string name="command">Command</string>
+    <string name="min_temperature">Min Temperature</string>
+    <string name="set">Set</string>
+    <string name="max_temperature">Max Temperature</string>
+    <string name="set_temperature">Set Temperature</string>
+    <string name="temperature_t">Pengaruh suhu juga tak kalah penting. Tumbuhan dapat tumbuh dengan baik pada suhu optimum yaitu berkisar antara 18 sampai 25 derajat celcius</string>
 
 
 </resources>

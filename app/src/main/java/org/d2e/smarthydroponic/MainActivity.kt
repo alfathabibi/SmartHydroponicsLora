@@ -27,5 +27,11 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        cvSetPump.setOnClickListener {
+            Intent(this, PumpActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 }

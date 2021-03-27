@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NutritionActivity">
+    tools:context=".PumpActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -19,69 +19,45 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvBtnSetMinT"
-            android:layout_width="64dp"
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="@color/colorGray"
-            app:cardCornerRadius="4dp"
-            app:layout_constraintBottom_toBottomOf="@+id/tvCelciusNutrition"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWaterpump2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvCelciusNutrition">
+            app:layout_constraintTop_toTopOf="@+id/tvWaterpump2" />
 
-            <TextView
-                android:id="@+id/tvBtnSetMaxT"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:text="@string/set"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
-        </androidx.cardview.widget.CardView>
-
-        <EditText
-            android:id="@+id/etMinNutrition"
-            android:layout_width="64dp"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/ivWaterPump2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/backgroundwhite"
-            android:ems="10"
-            android:hint="0"
-            android:inputType="numberDecimal"
-            android:maxLength="4"
-            android:textAlignment="center"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvMinNutrition" />
+            app:layout_constraintTop_toBottomOf="@+id/tvMinPump"
+            app:srcCompat="@drawable/impeller" />
 
         <TextView
-            android:id="@+id/tvCelciusNutrition"
+            android:id="@+id/tvWaterpump2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="@string/toolsPpm"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:layout_marginStart="8dp"
+            android:text="@string/water_pump"
+            android:textColor="@android:color/background_dark"
+            android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/etMinNutrition"
-            app:layout_constraintStart_toEndOf="@+id/etMinNutrition"
-            app:layout_constraintTop_toTopOf="@+id/etMinNutrition" />
+            app:layout_constraintBottom_toBottomOf="@+id/ivWaterPump2"
+            app:layout_constraintStart_toEndOf="@+id/ivWaterPump2"
+            app:layout_constraintTop_toTopOf="@+id/ivWaterPump2" />
 
         <TextView
-            android:id="@+id/tvMinNutrition"
+            android:id="@+id/tvMinPump"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:text="@string/set_nutrition_level"
+            android:text="@string/set_pump_level"
             android:textColor="@color/hitam"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +66,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/ivBackNutrition"
+        android:id="@+id/ivBackPump"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
@@ -100,14 +76,14 @@
         app:srcCompat="@drawable/left_arrow" />
 
     <TextView
-        android:id="@+id/tvTitleNutri"
+        android:id="@+id/tvTitlePump"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:lineSpacingExtra="4sp"
-        android:text="@string/set_nutrition"
+        android:text="@string/set_pump"
         android:textAlignment="center"
         android:textColor="@color/hitam"
         android:textSize="18sp"
@@ -117,19 +93,19 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/tvDescNutri"
+        android:id="@+id/tvDescPump"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:lineSpacingExtra="4sp"
-        android:text="@string/nutrision_t"
+        android:text="@string/pump_t"
         android:textAlignment="center"
         android:textColor="@color/hitam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleNutri" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitlePump" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -139,6 +115,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/nutrition" />
+        app:srcCompat="@drawable/set_pump" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

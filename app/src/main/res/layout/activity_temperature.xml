@@ -110,6 +110,7 @@
             android:ems="10"
             android:hint="0"
             android:inputType="numberDecimal"
+            android:maxLength="4"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvMinTemperature" />
@@ -125,6 +126,7 @@
             android:focusable="true"
             android:hint="0"
             android:inputType="number|numberDecimal"
+            android:maxLength="4"
             android:selectAllOnFocus="false"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"

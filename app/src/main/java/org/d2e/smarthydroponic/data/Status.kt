@@ -10,5 +10,5 @@ data class Status (
     var phUp : Int = 0,
     var tdsValue : Int = 0,
     var temperatureValue : Int = 0,
-
+    var mixPump : Int = 0
 )

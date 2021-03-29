@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.data.observe(this, Observer {
 
             Ph.text = it.status.phValue.toString()
-            temperature.text = it.status.temperatureValue.toString()
+            temperature.text = it.status.tempratureValue.toString()
             Nutri.text = it.status.tdsValue.toString()
 
             if(it.command.flowPump == 0){
@@ -49,17 +49,17 @@ class MainActivity : AppCompatActivity() {
                 statusWaterHeater.text = getString(R.string.on)
             }
 
-            if (it.status.nutriUp == 0 && it.status.nutriDown == 1){
+            if (it.status.nutriup == 0 && it.status.nutridown == 1){
                 statusNutriUp.text = getString(R.string.down)
-            }else if(it.status.nutriUp == 1 && it.status.nutriDown == 0){
+            }else if(it.status.nutriup == 1 && it.status.nutridown == 0){
                 statusNutriUp.text = getString(R.string.up)
             }else{
                 statusNutriUp.text = getString(R.string.off)
             }
 
-            if (it.status.phUp == 0 && it.status.phDown == 1){
+            if (it.status.phup == 0 && it.status.phdown == 1){
                 statusPhUp.text = getString(R.string.down)
-            }else if(it.status.nutriUp == 1 && it.status.nutriDown == 0){
+            }else if(it.status.phup == 1 && it.status.phdown == 0){
                 statusPhUp.text = getString(R.string.up)
             }else{
                 statusPhUp.text = getString(R.string.off)

@@ -42,8 +42,10 @@
     <string name="ph_t">Derajat pH mempengaruhi pertumbuhan dan kelangsungan hidup tanaman hidroponik, pada larutan nutrisi hidroponik yang bersifat netral memungkinkan tanaman dapat tumbuh dengan baik dan bertahan hidup dalam jangka waktu yang maksimal</string>
     <string name="pump_t">Terdapat jenis hidroponik yang mengharuskan pompa selalu aktif dan ada juga yang dapat diatur sesuai keinginan</string>
     <string name="current_temperature_set">Current Temperature Set : %.2f - %.2f</string>
+    <string name="current_nutrition_set">Current Nutrition Set : %d</string>
     <string name="please_fill_the_blank">Please Fill The Blank</string>
     <string name="min_temperature_error">Minimimal Temperature 0</string>
+    <string name="nutrition_error">Minimimal Nutrition 0</string>
     <string name="update_successfull">Update Successfull</string>
 
 </resources>

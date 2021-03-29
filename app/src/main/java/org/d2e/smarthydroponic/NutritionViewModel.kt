@@ -8,23 +8,15 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.d2e.smarthydroponic.data.DevicesDao
 
-class TemperatureViewModel (private val db: DevicesDao) : ViewModel(){
+class NutritionViewModel (private val db: DevicesDao) : ViewModel(){
     val data = db.getData()
 
     private val temperatureDb = FirebaseDatabase.getInstance().getReference("devices/shl1/command")
 
-    fun updateMinTemperature(minTemperature: Float){
+    fun updateNutrition(nutrition: Int){
         viewModelScope.launch {
             withContext(Dispatchers.IO){
-                temperatureDb.child("minTemp").setValue(minTemperature)
-            }
-        }
-    }
-
-    fun updateMaxTemperature(maxTemperature: Float){
-        viewModelScope.launch {
-            withContext(Dispatchers.IO){
-                temperatureDb.child("maxTemp").setValue(maxTemperature)
+                temperatureDb.child("nutriSet").setValue(nutrition)
             }
         }
     }

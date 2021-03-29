@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".NutritionActivity">
 
+    <TextView
+        android:id="@+id/tvCurrentNutrition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/set_nutrition_level"
+        android:textColor="@color/hitam"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
@@ -20,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cvBtnSetMinT"
+            android:id="@+id/cvBtnSetNutrition"
             android:layout_width="64dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"

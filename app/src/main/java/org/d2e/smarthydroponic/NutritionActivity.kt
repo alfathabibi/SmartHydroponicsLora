@@ -31,10 +31,12 @@ class NutritionActivity : AppCompatActivity() {
             if (nutritionSet.isEmpty()){
                 etMinNutrition.error = getString(R.string.please_fill_the_blank)
                 etMinNutrition.requestFocus()
+                return@setOnClickListener
             }
             if (nutritionSet.toInt() < 0){
                 etMinNutrition.error = getString(R.string.nutrition_error)
                 etMinNutrition.requestFocus()
+                return@setOnClickListener
             }
 
             viewModel.updateNutrition(nutritionSet.toInt())

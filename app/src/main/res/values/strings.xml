@@ -39,13 +39,15 @@
     <string name="set_pump_level">Set Pump Level</string>
     <string name="temperature_t">Pengaruh suhu juga tak kalah penting. Tumbuhan dapat tumbuh dengan baik pada suhu optimum yaitu berkisar antara 18 sampai 25 derajat celcius</string>
     <string name="nutrision_t">Perlu dipahami bawa untuk dapat tumbuh, tanaman pada umumnya membutuhkan unsur hara yang sangat kompleksDi alam, pengelompokan dibagi menjadi dua yaitu unsur hara makro dan unsur hara mikro.</string>
-    <string name="ph_t">Derajat pH mempengaruhi pertumbuhan dan kelangsungan hidup tanaman hidroponik, pada larutan nutrisi hidroponik yang bersifat netral memungkinkan tanaman dapat tumbuh dengan baik dan bertahan hidup dalam jangka waktu yang maksimal</string>
+    <string name="ph_t">Level pH mempengaruhi pertumbuhan dan kelangsungan hidup tanaman hidroponik, pada larutan nutrisi hidroponik yang bersifat netral memungkinkan tanaman dapat tumbuh dengan baik dan bertahan hidup dalam jangka waktu yang maksimal</string>
     <string name="pump_t">Terdapat jenis hidroponik yang mengharuskan pompa selalu aktif dan ada juga yang dapat diatur sesuai keinginan</string>
     <string name="current_temperature_set">Current Temperature Set : %.2f - %.2f</string>
     <string name="current_nutrition_set">Current Nutrition Set : %d</string>
+    <string name="current_ph_set">Current pH Set : %.2f</string>
     <string name="please_fill_the_blank">Please Fill The Blank</string>
     <string name="min_temperature_error">Minimimal Temperature 0</string>
     <string name="nutrition_error">Minimimal Nutrition 0</string>
+    <string name="ph_error">pH Range between 0 - 14</string>
     <string name="update_successfull">Update Successfull</string>
 
 </resources>

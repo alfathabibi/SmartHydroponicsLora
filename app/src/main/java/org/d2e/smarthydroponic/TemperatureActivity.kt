@@ -32,10 +32,12 @@ class TemperatureActivity : AppCompatActivity() {
             if (minTempSet.isEmpty()){
                 etMinTemperature.error = getString(R.string.please_fill_the_blank)
                 etMinTemperature.requestFocus()
+                return@setOnClickListener
             }
             if (minTempSet.toFloat() < 0){
                 etMinTemperature.error = getString(R.string.min_temperature_error)
                 etMinTemperature.requestFocus()
+                return@setOnClickListener
             }
 
             viewModel.updateMinTemperature(minTempSet.toFloat())
@@ -48,10 +50,12 @@ class TemperatureActivity : AppCompatActivity() {
             if (maxTempSet.isEmpty()){
                 etMinTemperature.error = getString(R.string.please_fill_the_blank)
                 etMinTemperature.requestFocus()
+                return@setOnClickListener
             }
             if (maxTempSet.toFloat() < 0){
                 etMinTemperature.error = getString(R.string.min_temperature_error)
                 etMinTemperature.requestFocus()
+                return@setOnClickListener
             }
 
             viewModel.updateMaxTemperature(maxTempSet.toFloat())

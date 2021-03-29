@@ -15,7 +15,7 @@
     <string name="temperature">Temperature</string>
     <string name="nutrition">Nutrition</string>
     <string name="toolsTempt">28</string>
-    <string name="toolsC">^C</string>
+    <string name="toolsC">°C</string>
     <string name="toolsPpm">ppm</string>
     <string name="toolsNutri">1500</string>
     <string name="toolsPh">7.5</string>
@@ -41,7 +41,7 @@
     <string name="nutrision_t">Perlu dipahami bawa untuk dapat tumbuh, tanaman pada umumnya membutuhkan unsur hara yang sangat kompleksDi alam, pengelompokan dibagi menjadi dua yaitu unsur hara makro dan unsur hara mikro.</string>
     <string name="ph_t">Level pH mempengaruhi pertumbuhan dan kelangsungan hidup tanaman hidroponik, pada larutan nutrisi hidroponik yang bersifat netral memungkinkan tanaman dapat tumbuh dengan baik dan bertahan hidup dalam jangka waktu yang maksimal</string>
     <string name="pump_t">Terdapat jenis hidroponik yang mengharuskan pompa selalu aktif dan ada juga yang dapat diatur sesuai keinginan</string>
-    <string name="current_temperature_set">Current Temperature Set : %.2f - %.2f</string>
+    <string name="current_temperature_set">Current Temperature Set : %.2f °C - %.2f °C</string>
     <string name="current_nutrition_set">Current Nutrition Set : %d</string>
     <string name="current_ph_set">Current pH Set : %.2f</string>
     <string name="please_fill_the_blank">Please Fill The Blank</string>

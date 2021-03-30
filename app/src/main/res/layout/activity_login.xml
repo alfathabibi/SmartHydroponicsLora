@@ -4,7 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.RegisterActivity">
+    tools:context=".auth.LoginActivity">
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/forgot_password"
+        android:textAlignment="center"
+        android:textColor="@color/hitam"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/cvBtnLogin"
+        app:layout_constraintEnd_toEndOf="@+id/cvBtnLogin" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvBtnLogin"
@@ -22,12 +36,12 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/tvBtnSignup"
+            android:id="@+id/tvBtnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="12dp"
-            android:text="@string/sign_up"
+            android:text="@string/Login"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -47,23 +61,23 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/tvHaveAccount"
+            android:id="@+id/tvDontHaveAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:lineSpacingExtra="4sp"
-            android:text="@string/have_account"
+            android:text="@string/dont_have_account"
             android:textAlignment="center"
             android:textColor="@color/hitam"
             android:textSize="14sp"
             android:textStyle="normal" />
 
         <TextView
-            android:id="@+id/tvLoginHere"
+            android:id="@+id/tvSignup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="4sp"
-            android:text="@string/login_here"
+            android:text="@string/sign_up"
             android:textAlignment="center"
             android:textColor="@color/hitam"
             android:textSize="14sp"
@@ -86,26 +100,6 @@
         android:textAlignment="textStart"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/etDeviceId"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/etDeviceId"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/roundedbackgroundform"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:hint="@string/deviceid"
-        android:inputType="text"
-        android:padding="14dp"
-        android:textAlignment="textStart"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/etPasswordLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -116,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/roundedbackgroundform"
         android:ems="10"
         android:fontFamily="sans-serif"
@@ -126,27 +120,7 @@
         android:textAlignment="textStart"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/etConfirmPasswordRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/etConfirmPasswordRegister"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/roundedbackgroundform"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:hint="@string/confirm_password"
-        android:inputType="textPassword"
-        android:padding="14dp"
-        android:textAlignment="textStart"
-        android:textColor="@color/hitam"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/cvBtnLogin"
+        app:layout_constraintBottom_toTopOf="@+id/tvForgotPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -157,7 +131,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:lineSpacingExtra="4sp"
-        android:text="@string/create_your_account"
+        android:text="@string/welcome_back"
         android:textAlignment="center"
         android:textColor="@color/hitam"
         android:textSize="24sp"
@@ -170,7 +144,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:lineSpacingExtra="4sp"
-        android:text="@string/signup_get_started"
+        android:text="@string/login_to"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/tvWelcomeBack"
@@ -185,4 +159,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLoginTo"
         app:srcCompat="@drawable/set_nutrition" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

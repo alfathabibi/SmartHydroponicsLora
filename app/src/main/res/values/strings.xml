@@ -49,5 +49,17 @@
     <string name="nutrition_error">Minimimal Nutrition 0</string>
     <string name="ph_error">pH Range between 0 - 14</string>
     <string name="update_successfull">Update Successfull</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="signup_get_started">Sign up and get started</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="Login">Login</string>
+    <string name="Logout">Logout</string>
+    <string name="deviceid">Device ID</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="register">Register</string>
+    <string name="have_account">Have an account ?</string>
+    <string name="login_here">Login here</string>
 
 </resources>

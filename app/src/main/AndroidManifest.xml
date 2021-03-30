@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PumpActivity"></activity>
-        <activity android:name=".PhActivity" />
-        <activity android:name=".NutritionActivity" />
-        <activity android:name=".TemperatureActivity" />
+        <activity android:name=".auth.RegisterActivity"></activity>
+        <activity android:name=".process.PumpActivity" />
+        <activity android:name=".process.PhActivity" />
+        <activity android:name=".process.NutritionActivity" />
+        <activity android:name=".process.TemperatureActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

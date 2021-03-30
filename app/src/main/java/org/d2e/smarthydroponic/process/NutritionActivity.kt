@@ -1,4 +1,4 @@
-package org.d2e.smarthydroponic
+package org.d2e.smarthydroponic.process
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_nutrition.*
+import org.d2e.smarthydroponic.R
 import org.d2e.smarthydroponic.data.DevicesDb
 
 class NutritionActivity : AppCompatActivity() {

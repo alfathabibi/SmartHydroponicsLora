@@ -1,4 +1,4 @@
-package org.d2e.smarthydroponic
+package org.d2e.smarthydroponic.process
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -8,15 +8,15 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.d2e.smarthydroponic.data.DevicesDao
 
-class PumpViewModel (private val db: DevicesDao) : ViewModel(){
+class NutritionViewModel (private val db: DevicesDao) : ViewModel(){
     val data = db.getData()
 
-    private val pumpDb = FirebaseDatabase.getInstance().getReference("devices/shl1/command")
+    private val temperatureDb = FirebaseDatabase.getInstance().getReference("devices/shl1/command")
 
-    fun updatePump(pumpSet: Int){
+    fun updateNutrition(nutrition: Int){
         viewModelScope.launch {
             withContext(Dispatchers.IO){
-                pumpDb.child("flowPump").setValue(pumpSet)
+                temperatureDb.child("nutriSet").setValue(nutrition)
             }
         }
     }

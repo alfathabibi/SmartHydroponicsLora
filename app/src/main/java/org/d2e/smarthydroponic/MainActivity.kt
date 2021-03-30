@@ -6,7 +6,12 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_main.*
+import org.d2e.smarthydroponic.auth.RegisterActivity
 import org.d2e.smarthydroponic.data.DevicesDb
+import org.d2e.smarthydroponic.process.NutritionActivity
+import org.d2e.smarthydroponic.process.PhActivity
+import org.d2e.smarthydroponic.process.PumpActivity
+import org.d2e.smarthydroponic.process.TemperatureActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -86,6 +91,11 @@ class MainActivity : AppCompatActivity() {
 
         cvSetPump.setOnClickListener {
             Intent(this, PumpActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+        ivSetting.setOnClickListener {
+            Intent(this, RegisterActivity::class.java).also {
                 startActivity(it)
             }
         }

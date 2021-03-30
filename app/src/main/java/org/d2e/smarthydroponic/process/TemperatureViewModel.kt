@@ -1,4 +1,4 @@
-package org.d2e.smarthydroponic
+package org.d2e.smarthydroponic.process
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

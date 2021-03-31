@@ -33,7 +33,7 @@
             app:layout_constraintTop_toTopOf="@+id/tvCelciusTemperature2">
 
             <TextView
-                android:id="@+id/tvBtnSignup"
+                android:id="@+id/tvBtnSetMinT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

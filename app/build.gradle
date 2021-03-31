@@ -46,4 +46,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     //realtime
     implementation 'com.google.firebase:firebase-database-ktx'
+    //auth
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
 }

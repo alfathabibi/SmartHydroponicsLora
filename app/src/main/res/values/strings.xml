@@ -65,5 +65,9 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="welcome_back">Welcome Back,</string>
     <string name="login_to">Login to continue</string>
+    <string name="email_required">Email Required</string>
+    <string name="devicid_required">Device ID Required</string>
+    <string name="password_required">Password Required</string>
+    <string name="password_different">Password is different</string>
 
 </resources>

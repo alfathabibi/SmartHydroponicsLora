@@ -92,7 +92,7 @@ class RegisterActivity : AppCompatActivity() {
             }else{
                 progressBar.visibility = View.GONE
                 tvBtnSignup.visibility = View.VISIBLE
-                Toast.makeText(this, Objects.requireNonNull(it.exception)?.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, Objects.requireNonNull(it.exception)!!.message, Toast.LENGTH_SHORT).show()
             }
         }
     }

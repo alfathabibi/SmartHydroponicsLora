@@ -9,12 +9,13 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.getValue
+import org.d2e.smarthydroponic.auth.FirebaseUserLiveData
 import org.d2e.smarthydroponic.data.Device
 
 class MainViewModel() : ViewModel(){
     private val firebaseAuth = FirebaseAuth.getInstance()
     private val databaseReference = FirebaseDatabase.getInstance()
-
+    val authState = FirebaseUserLiveData()
     private var _deviceId = MutableLiveData<String>()
     private var _data = MutableLiveData<Device>()
 

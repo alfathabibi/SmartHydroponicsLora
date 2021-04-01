@@ -74,5 +74,10 @@
     <string name="about_us">About Us</string>
     <string name="help">Help</string>
     <string name="change_password">Change Password</string>
+    <string name="confirm_logout">Are you sure want to logout</string>
+    <string name="send_reset_message">Send Reset Message</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="account_not_exist_message">This is not an registered email, you can create new account</string>
+    <string name="account_exist_message">a reset email has been sent to your email address</string>
 
 </resources>

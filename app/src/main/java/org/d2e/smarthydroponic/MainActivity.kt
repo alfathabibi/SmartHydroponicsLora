@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_main.*
+import org.d2e.smarthydroponic.auth.LoginActivity
 import org.d2e.smarthydroponic.auth.RegisterActivity
 import org.d2e.smarthydroponic.process.NutritionActivity
 import org.d2e.smarthydroponic.process.PhActivity
@@ -22,6 +23,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        viewModel.authState.observe(this, Observer {
+            if(it == null){
+                Intent(this, LoginActivity::class.java).also {
+                    startActivity(it)
+                    finish()
+                }
+            }
+        })
 
         viewModel.data.observe(this, Observer {
 

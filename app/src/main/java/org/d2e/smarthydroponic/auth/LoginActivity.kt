@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
+import org.d2e.smarthydroponic.ForgetPasswordActivity
 import org.d2e.smarthydroponic.MainActivity
 import org.d2e.smarthydroponic.R
 import org.d2e.smarthydroponic.process.PhActivity
@@ -60,6 +61,12 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             }
         }
+
+        tvForgotPassword.setOnClickListener {
+            Intent(this, ForgetPasswordActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     private fun login(email: String, password: String) {
@@ -70,10 +77,15 @@ class LoginActivity : AppCompatActivity() {
             if (it.isSuccessful){
                 Intent(this, MainActivity::class.java).also {
                     startActivity(it)
+                    progressBarLogin.visibility = View.GONE
+                    tvBtnLogin.visibility = View.VISIBLE
                 }
                 finish()
             }else{
                 Toast.makeText(this, it.exception!!.message, Toast.LENGTH_SHORT).show()
+                progressBarLogin.visibility = View.GONE
+                tvBtnLogin.visibility = View.VISIBLE
+                return@addOnCompleteListener
             }
         }
     }

@@ -54,7 +54,7 @@
             android:id="@+id/ivCp"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -109,11 +109,11 @@
             android:id="@+id/ivHelp"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/roundedrectangletransparent" />
+            app:srcCompat="@drawable/helper" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -164,7 +164,7 @@
             android:id="@+id/ivAboutUs"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

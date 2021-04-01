@@ -16,7 +16,7 @@
         android:textAlignment="center"
         android:textColor="@color/hitam"
         android:textSize="14sp"
-        android:textStyle="normal"
+        android:textStyle="normal|italic"
         app:layout_constraintBottom_toTopOf="@+id/cvBtnLogin"
         app:layout_constraintEnd_toEndOf="@+id/cvBtnLogin" />
 

@@ -79,5 +79,8 @@
     <string name="reset_password">Reset Password</string>
     <string name="account_not_exist_message">This is not an registered email, you can create new account</string>
     <string name="account_exist_message">a reset email has been sent to your email address</string>
+    <string name="device_not_exist_message">Oops Device not found. You can update it below</string>
+    <string name="new_device_id">New Device ID</string>
+    <string name="update">Update</string>
 
 </resources>

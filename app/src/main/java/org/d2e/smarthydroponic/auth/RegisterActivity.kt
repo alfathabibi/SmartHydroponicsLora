@@ -28,7 +28,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         firebaseAuth = FirebaseAuth.getInstance()
-
+                
         tvLoginHere.setOnClickListener {
             Intent(this, LoginActivity::class.java).also {
                 startActivity(it)
@@ -52,6 +52,10 @@ class RegisterActivity : AppCompatActivity() {
             }
             if (password.isEmpty()){
                 etPasswordRegister.error = getString(R.string.password_required)
+                return@setOnClickListener
+            }
+            if (password.length < 6){
+                etPasswordRegister.error = getString(R.string.password_less)
                 return@setOnClickListener
             }
             if (password != cPassword){

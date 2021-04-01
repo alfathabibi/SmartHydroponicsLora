@@ -7,13 +7,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_ph.*
 import org.d2e.smarthydroponic.R
-import org.d2e.smarthydroponic.data.DevicesDb
 
 class PhActivity : AppCompatActivity() {
-    private val viewModel: PhViewModel by lazy {
-        val factory = PhViewModelFactory(DevicesDb.getInstance())
-        ViewModelProvider(this, factory).get(PhViewModel::class.java)
-    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ph)
@@ -21,6 +17,9 @@ class PhActivity : AppCompatActivity() {
         ivBackPh.setOnClickListener {
             finish()
         }
+
+
+        val viewModel = ViewModelProvider(this).get(PhViewModel::class.java)
 
         viewModel.data.observe(this, Observer {
             tvCurrentPh.text = getString(R.string.current_ph_set, it.command.phSet)
@@ -33,13 +32,13 @@ class PhActivity : AppCompatActivity() {
                 etMinPh.requestFocus()
                 return@setOnClickListener
             }
-            if (pHSet.toFloat() < 0 || pHSet.toFloat() > 14){
+            if (pHSet.toDouble() < 0 || pHSet.toFloat() > 14){
                 etMinPh.setError(getString(R.string.ph_error))
                 etMinPh.requestFocus()
                 return@setOnClickListener
             }
 
-            viewModel.updateNutrition(pHSet.toFloat())
+            viewModel.updatePh(pHSet.toDouble())
             Toast.makeText(this, getString(R.string.update_successfull), Toast.LENGTH_SHORT).show()
             etMinPh.text.clear()
         }

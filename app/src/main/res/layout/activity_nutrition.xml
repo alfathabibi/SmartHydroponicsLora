@@ -67,7 +67,7 @@
             android:background="@drawable/backgroundwhite"
             android:ems="10"
             android:hint="0"
-            android:inputType="numberDecimal"
+            android:inputType="number"
             android:maxLength="4"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"

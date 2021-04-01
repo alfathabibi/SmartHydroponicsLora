@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
+import org.d2e.smarthydroponic.MainActivity
 import org.d2e.smarthydroponic.R
 import org.d2e.smarthydroponic.process.PhActivity
 
@@ -29,8 +30,9 @@ class LoginActivity : AppCompatActivity() {
 
         viewModel.authState.observe(this, Observer {
             if (it != null){
-                Intent(this, FilterActivity::class.java).also {
+                Intent(this, MainActivity::class.java).also {
                     startActivity(it)
+                    finish()
                 }
             }
         })
@@ -66,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
 
         firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
             if (it.isSuccessful){
-                Intent(this, FilterActivity::class.java).also {
+                Intent(this, MainActivity::class.java).also {
                     startActivity(it)
                 }
                 finish()

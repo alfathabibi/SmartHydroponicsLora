@@ -5,6 +5,8 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorGray">#C4C4C4</color>
     <color name="colorGray2">#E1E1E1</color>
+    <color name="orange">#FFB636</color>
+    <color name="hijau">#165D58</color>
     <color name="hitam">#000000</color>
 
 </resources>

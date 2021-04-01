@@ -7,14 +7,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_nutrition.*
 import org.d2e.smarthydroponic.R
-import org.d2e.smarthydroponic.data.DevicesDb
 
 class NutritionActivity : AppCompatActivity() {
 
-    private val viewModel: NutritionViewModel by lazy {
-        val factory = NutritionViewModelFactory(DevicesDb.getInstance())
-        ViewModelProvider(this, factory).get(NutritionViewModel::class.java)
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nutrition)
@@ -22,6 +17,8 @@ class NutritionActivity : AppCompatActivity() {
         ivBackNutrition.setOnClickListener {
             finish()
         }
+
+        val viewModel = ViewModelProvider(this).get(NutritionViewModel::class.java)
 
         viewModel.data.observe(this, Observer {
             tvCurrentNutrition.text = getString(R.string.current_nutrition_set, it.command.nutriSet)

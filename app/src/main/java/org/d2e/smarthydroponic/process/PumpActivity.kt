@@ -5,16 +5,18 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_pump.*
 import org.d2e.smarthydroponic.R
-import org.d2e.smarthydroponic.data.DevicesDb
 
 class PumpActivity : AppCompatActivity() {
 
-    private val viewModel: PumpViewModel by lazy {
-        val factory = PumpViewModelFactory(DevicesDb.getInstance())
-        ViewModelProvider(this, factory).get(PumpViewModel::class.java)
-    }
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
+    private lateinit var user: FirebaseUser
+    private lateinit var deviceId : String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pump)
@@ -23,12 +25,10 @@ class PumpActivity : AppCompatActivity() {
             finish()
         }
 
+        val viewModel = ViewModelProvider(this).get(PumpViewModel::class.java)
+
         viewModel.data.observe(this, Observer {
-            if (it.command.flowPump == 1){
-                swPump.isChecked = true
-            }else{
-                swPump.isChecked = false
-            }
+            swPump.isChecked = it.command.flowPump == 1
         })
 
         swPump.setOnClickListener {

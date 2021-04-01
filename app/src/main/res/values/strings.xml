@@ -68,6 +68,8 @@
     <string name="email_required">Email Required</string>
     <string name="devicid_required">Device ID Required</string>
     <string name="password_required">Password Required</string>
+    <string name="password_less">Password must minimal 6 character</string>
     <string name="password_different">Password is different</string>
+    <string name="nothing_device">Device with ID %s not exist</string>
 
 </resources>

@@ -206,7 +206,7 @@
             app:srcCompat="@drawable/settings" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout5"
+            android:id="@+id/clAboutUs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -253,7 +253,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
-            app:layout_constraintEnd_toStartOf="@+id/constraintLayout5"
+            app:layout_constraintEnd_toStartOf="@+id/clAboutUs"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout4">
 

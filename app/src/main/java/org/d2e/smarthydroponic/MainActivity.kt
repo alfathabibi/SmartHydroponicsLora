@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         ivSetting.setOnClickListener {
-            Intent(this, RegisterActivity::class.java).also {
+            Intent(this, SettingActivity::class.java).also {
                 startActivity(it)
             }
         }

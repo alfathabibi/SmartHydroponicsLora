@@ -71,5 +71,8 @@
     <string name="password_less">Password must minimal 6 character</string>
     <string name="password_different">Password is different</string>
     <string name="nothing_device">Device with ID %s not exist</string>
+    <string name="about_us">About Us</string>
+    <string name="help">Help</string>
+    <string name="change_password">Change Password</string>
 
 </resources>

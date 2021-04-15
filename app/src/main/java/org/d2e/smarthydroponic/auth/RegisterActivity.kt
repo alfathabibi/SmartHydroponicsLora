@@ -41,6 +41,7 @@ class RegisterActivity : AppCompatActivity() {
             val deviceId = etDeviceId.text.toString()
             val password = etPasswordRegister.text.toString()
             val cPassword = etConfirmPasswordRegister.text.toString()
+            val name = etNameRegister.text.toString()
 
             if(!isValidEmail(email)){
                 etEmailRegister.error = (getString(R.string.email_required))
@@ -63,12 +64,17 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            register(email, deviceId, password)
+            if  (name.isEmpty()){
+                etNameRegister.error = getString(R.string.name_required)
+                return@setOnClickListener
+            }
+
+            register(name,email, deviceId, password)
 
         }
     }
 
-    private fun register(email: String, deviceId: String, password: String) {
+    private fun register(name: String, email: String, deviceId: String, password: String) {
         progressBar.visibility = View.VISIBLE
         tvBtnSignup.visibility = View.GONE
 
@@ -81,14 +87,16 @@ class RegisterActivity : AppCompatActivity() {
                 hashMap.put("userId",userId)
                 hashMap.put("email",email)
                 hashMap.put("deviceId",deviceId)
+                hashMap.put("name",name)
 
                 databaseReference.setValue(hashMap).addOnCompleteListener {
                     if (it.isSuccessful){
                         progressBar.visibility = View.GONE
                         tvBtnSignup.visibility = View.VISIBLE
                         val intent = Intent(this, MainActivity::class.java)
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
+                        finish()
                     }else{
                         Toast.makeText(this, Objects.requireNonNull(it.exception)?.message, Toast.LENGTH_SHORT).show()
                     }

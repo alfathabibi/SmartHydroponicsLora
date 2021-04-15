@@ -14,7 +14,7 @@
         android:lineSpacingExtra="4sp"
         android:text="@string/forgot_password"
         android:textAlignment="center"
-        android:textColor="@color/hitam"
+        android:textColor="@color/hijau"
         android:textSize="14sp"
         android:textStyle="normal|italic"
         app:layout_constraintBottom_toTopOf="@+id/cvBtnLogin"

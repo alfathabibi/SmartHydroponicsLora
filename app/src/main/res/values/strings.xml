@@ -82,5 +82,11 @@
     <string name="device_not_exist_message">Oops Device not found. You can update it below</string>
     <string name="new_device_id">New Device ID</string>
     <string name="update">Update</string>
+    <string name="name">Name</string>
+    <string name="name_required">Name Required</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="Save">Save</string>
 
 </resources>

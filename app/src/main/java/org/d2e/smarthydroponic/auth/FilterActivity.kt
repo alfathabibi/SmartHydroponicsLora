@@ -10,9 +10,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_filter.*
+import kotlinx.android.synthetic.main.activity_main.*
 import org.d2e.smarthydroponic.MainActivity
 import org.d2e.smarthydroponic.MainViewModel
 import org.d2e.smarthydroponic.R
+import org.d2e.smarthydroponic.SettingActivity
 
 class FilterActivity : AppCompatActivity() {
 
@@ -29,23 +31,10 @@ class FilterActivity : AppCompatActivity() {
             tvDevId.text = "ID : $it"
         })
 
-        cvBtnLogoutFilter.setOnClickListener {
-            val builder = AlertDialog.Builder(this@FilterActivity)
-            builder.setMessage(getString(R.string.confirm_logout))
-                .setCancelable(false)
-                .setPositiveButton("Yes"){dialog, id ->
-                    firebaseAuth.signOut()
-                    Intent(applicationContext, LoginActivity::class.java).also {
-                        it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                        startActivity(it)
-                        finish()
-                    }
-                }
-                .setNegativeButton("No"){ dialog, id->
-                    dialog.dismiss()
-                }
-            val alert = builder.create()
-            alert.show()
+        ivSettingFilter.setOnClickListener {
+            Intent(this, SettingActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
         cvBtnUpdateDeviceId.setOnClickListener {

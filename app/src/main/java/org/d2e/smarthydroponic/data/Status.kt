@@ -6,9 +6,9 @@ data class Status(
     var mixPump: Int = 0,
     var nutridown: Int = 0,
     var nutriup: Int = 0,
-    var phValue: Float = 0F,
+    var phValue: Double = 0.0,
     var phdown: Int = 0,
     var phup: Int = 0,
     var tdsValue: Int = 0,
-    var tempratureValue: Float = 0F
+    var tempratureValue: Double = 0.0
 )

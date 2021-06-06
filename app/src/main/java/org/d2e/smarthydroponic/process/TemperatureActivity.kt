@@ -20,7 +20,11 @@ class TemperatureActivity : AppCompatActivity() {
 
         val viewModel = ViewModelProvider(this).get(TemperatureViewModel::class.java)
         viewModel.data.observe(this, Observer {
-            tvCurrentTemperature.text = getString(R.string.current_temperature_set, it.command.minTemp, it.command.maxTemp)
+            val minTemp = it.command.minTemp.toString()
+            val maxTemp = it.command.maxTemp.toString()
+            val tempValue = it.status.tempratureValue.toString()
+            tvSetTemperature.text = getString(R.string.current_temperature_set, minTemp.take(4), maxTemp.take(4))
+            tvCurrentTemperature.text = getString(R.string.current_temperature, tempValue.take(4))
         })
 
         cvBtnSetMinT.setOnClickListener {

@@ -9,6 +9,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.getValue
+import org.d2e.smarthydroponic.data.Device
 import org.d2e.smarthydroponic.data.User
 
 class SettingViewModel : ViewModel() {
@@ -16,6 +17,7 @@ class SettingViewModel : ViewModel() {
     private val databaseReference = FirebaseDatabase.getInstance()
 
     private var _user = MutableLiveData<User>()
+    private var _data = MutableLiveData<Device>()
 
     private fun getCurrentUser() = firebaseAuth.currentUser
 
@@ -29,6 +31,21 @@ class SettingViewModel : ViewModel() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val user = snapshot.getValue<User>()
                 _user.value = user
+                getDeviceData(user?.deviceId)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
+    }
+
+    private fun getDeviceData(devId : String?){
+        databaseReference.getReference("devices/$devId").addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val device = snapshot.getValue<Device>()
+                _data.value = device
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -39,4 +56,5 @@ class SettingViewModel : ViewModel() {
     }
 
     val user : LiveData<User> get() = _user
+    val data : LiveData<Device> get() = _data
 }

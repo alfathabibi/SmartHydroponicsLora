@@ -3,38 +3,39 @@ package org.d2e.smarthydroponic.auth
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_filter.*
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_change_dev_id.*
 import org.d2e.smarthydroponic.MainActivity
-import org.d2e.smarthydroponic.MainViewModel
 import org.d2e.smarthydroponic.R
-import org.d2e.smarthydroponic.SettingActivity
 
-class FilterActivity : AppCompatActivity() {
+class ChangeDevIdActivity : AppCompatActivity() {
 
     private val firebaseAuth = FirebaseAuth.getInstance()
-    private val viewModel : FilterViewModel by lazy {
-        ViewModelProvider(this).get(FilterViewModel::class.java)
+    private val viewModel : ChangeDevIdViewModel by lazy {
+        ViewModelProvider(this).get(ChangeDevIdViewModel::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_filter)
+        setContentView(R.layout.activity_change_dev_id)
 
         viewModel.deviceId.observe(this, Observer {
             tvDevId.text = "ID : $it"
         })
 
-        ivSettingFilter.setOnClickListener {
-            Intent(this, SettingActivity::class.java).also {
-                startActivity(it)
+        viewModel.data.observe(this, Observer {
+            if (it != null) {
+                ivSad.visibility = View.GONE
+                tvFilterMessage.text = getString(R.string.can_update)
             }
+        })
+
+        ivBackFilter.setOnClickListener {
+            onBackPressed()
         }
 
         cvBtnUpdateDeviceId.setOnClickListener {

@@ -7,9 +7,7 @@ import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_main.*
-import org.d2e.smarthydroponic.auth.FilterActivity
 import org.d2e.smarthydroponic.auth.LoginActivity
-import org.d2e.smarthydroponic.auth.RegisterActivity
 import org.d2e.smarthydroponic.process.NutritionActivity
 import org.d2e.smarthydroponic.process.PhActivity
 import org.d2e.smarthydroponic.process.PumpActivity
@@ -45,46 +43,60 @@ class MainActivity : AppCompatActivity() {
 
                 if (it.command.flowPump == 0) {
                     statusWaterPump.text = getString(R.string.off)
+                    statusWaterPump.setTextColor(resources.getColor(R.color.merah))
                 } else {
                     statusWaterPump.text = getString(R.string.on)
+                    statusWaterPump.setTextColor(resources.getColor(R.color.tosca))
                 }
 
                 if (it.status.mixPump == 0) {
                     statusMixPump.text = getString(R.string.off)
+                    statusMixPump.setTextColor(resources.getColor(R.color.merah))
                 } else {
                     statusMixPump.text = getString(R.string.on)
+                    statusMixPump.setTextColor(resources.getColor(R.color.tosca))
                 }
 
                 if (it.status.cooler == 0) {
                     statusCoolingFan.text = getString(R.string.off)
+                    statusCoolingFan.setTextColor(resources.getColor(R.color.merah))
                 } else {
                     statusCoolingFan.text = getString(R.string.on)
+                    statusCoolingFan.setTextColor(resources.getColor(R.color.tosca))
                 }
 
                 if (it.status.heater == 0) {
                     statusWaterHeater.text = getString(R.string.off)
+                    statusWaterHeater.setTextColor(resources.getColor(R.color.merah))
                 } else {
                     statusWaterHeater.text = getString(R.string.on)
+                    statusWaterHeater.setTextColor(resources.getColor(R.color.tosca))
                 }
 
                 if (it.status.nutriup == 0 && it.status.nutridown == 1) {
                     statusNutriUp.text = getString(R.string.down)
+                    statusNutriUp.setTextColor(resources.getColor(R.color.bitos))
                 } else if (it.status.nutriup == 1 && it.status.nutridown == 0) {
                     statusNutriUp.text = getString(R.string.up)
+                    statusNutriUp.setTextColor(resources.getColor(R.color.tosca))
                 } else {
                     statusNutriUp.text = getString(R.string.off)
+                    statusNutriUp.setTextColor(resources.getColor(R.color.merah))
                 }
 
                 if (it.status.phup == 0 && it.status.phdown == 1) {
                     statusPhUp.text = getString(R.string.down)
+                    statusPhUp.setTextColor(resources.getColor(R.color.bitos))
                 } else if (it.status.phup == 1 && it.status.phdown == 0) {
                     statusPhUp.text = getString(R.string.up)
+                    statusPhUp.setTextColor(resources.getColor(R.color.tosca))
                 } else {
                     statusPhUp.text = getString(R.string.off)
+                    statusPhUp.setTextColor(resources.getColor(R.color.merah))
                 }
             }else{
                 progressBarMain.visibility = View.VISIBLE
-                Intent(this, FilterActivity::class.java).also {
+                Intent(this, SettingActivity::class.java).also {
                     startActivity(it)
                     finish()
                 }

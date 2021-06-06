@@ -1,14 +1,18 @@
 package org.d2e.smarthydroponic
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_setting.*
+import org.d2e.smarthydroponic.auth.ChangeDevIdActivity
 import org.d2e.smarthydroponic.auth.LoginActivity
+import java.lang.Exception
 
 class SettingActivity : AppCompatActivity() {
 
@@ -30,8 +34,12 @@ class SettingActivity : AppCompatActivity() {
             }
         })
 
+        viewModel.data.observe(this, Observer {
+            if (it == null) tvDevIdSetting.text = getString(R.string.device_not_found)
+        })
+
         ivBackSetting.setOnClickListener {
-            finish()
+            onBackPressed()
         }
 
         clLogOut.setOnClickListener {
@@ -57,6 +65,32 @@ class SettingActivity : AppCompatActivity() {
             Intent(this, ChangePasswordActivity::class.java).also {
                 startActivity(it)
             }
+        }
+
+        clCD.setOnClickListener {
+            Intent(this, ChangeDevIdActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        clHelp.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            val recepients = "d23team2021@gmail.com"
+            val cc = "alfath.abibi@gmail.com"
+            intent.data = Uri.parse("mailto:")
+            intent.type = "message/rfc822"
+
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(recepients))
+            intent.putExtra(Intent.EXTRA_CC, arrayOf(cc))
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Help From User Moura")
+            intent.putExtra(Intent.EXTRA_TEXT, "")
+
+            try{
+                startActivity(Intent.createChooser(intent, "Choose Email Client..."))
+            }catch (e: Exception){
+                Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 }

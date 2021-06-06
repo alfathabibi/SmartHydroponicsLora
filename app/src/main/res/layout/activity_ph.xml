@@ -7,14 +7,26 @@
     tools:context=".process.PhActivity">
 
     <TextView
+        android:id="@+id/tvSetPh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        tools:text="@string/current_ph_set" />
+
+    <TextView
         android:id="@+id/tvCurrentPh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:textColor="@color/hitam"
+        android:textColor="@color/orange"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout2" />
+        app:layout_constraintBottom_toTopOf="@+id/tvSetPh"
+        app:layout_constraintStart_toStartOf="@+id/tvSetPh"
+        tools:text="@string/current_ph_set" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -36,7 +48,7 @@
             android:layout_marginEnd="16dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="@color/colorGray"
+            app:cardBackgroundColor="@android:color/white"
             app:cardCornerRadius="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/tvCelciusPh"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +63,7 @@
                 android:layout_marginBottom="4dp"
                 android:text="@string/set"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/hijau"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -67,6 +79,7 @@
             android:ems="10"
             android:hint="0"
             android:inputType="numberDecimal"
+            android:maxLength="4"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvMinPh" />
@@ -77,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/ph"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/etMinPh"
@@ -91,7 +104,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/set_ph_level"
-            android:textColor="@color/hitam"
+            android:textColor="@android:color/white"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -118,7 +131,7 @@
         android:lineSpacingExtra="4sp"
         android:text="@string/set_pH"
         android:textAlignment="center"
-        android:textColor="@color/hitam"
+        android:textColor="@color/hijau"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,13 +142,13 @@
         android:id="@+id/tvDescPh"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:lineSpacingExtra="4sp"
         android:text="@string/ph_t"
         android:textAlignment="center"
-        android:textColor="@color/hitam"
+        android:textColor="@color/hijau"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitlePh" />
@@ -144,10 +157,10 @@
         android:id="@+id/imageView"
         android:layout_width="192dp"
         android:layout_height="192dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/tvCurrentPh"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ph_meter" />
+        app:srcCompat="@drawable/ph_orange" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,8 @@ class NutritionActivity : AppCompatActivity() {
         val viewModel = ViewModelProvider(this).get(NutritionViewModel::class.java)
 
         viewModel.data.observe(this, Observer {
-            tvCurrentNutrition.text = getString(R.string.current_nutrition_set, it.command.nutriSet)
+            tvSetNutrition.text = getString(R.string.current_nutrition_set, it.command.nutriSet)
+            tvCurrentNutrition.text = getString(R.string.current_nutrition, it.status.tdsValue)
         })
 
         cvBtnSetNutrition.setOnClickListener {

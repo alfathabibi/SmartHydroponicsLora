@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/command"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/orange"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +45,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/colorGray"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="5dp">
 
                 <ImageView
                     android:id="@+id/ivSetTemprature"
@@ -63,7 +62,7 @@
                 android:layout_margin="4dp"
                 android:gravity="center"
                 android:text="@string/temperature"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/hijau"
                 android:textSize="10sp"
                 android:textStyle="bold" />
 
@@ -83,15 +82,15 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/colorGray"
-                app:cardCornerRadius="10dp">
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5dp">
 
                 <ImageView
                     android:id="@+id/ivSetNutrition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    app:srcCompat="@drawable/nutrition" />
+                    app:srcCompat="@drawable/set_nutrition" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -101,7 +100,7 @@
                 android:layout_margin="4dp"
                 android:gravity="center"
                 android:text="@string/nutrition"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/hijau"
                 android:textSize="10sp"
                 android:textStyle="bold" />
 
@@ -121,15 +120,15 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/colorGray"
-                app:cardCornerRadius="10dp">
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5dp">
 
                 <ImageView
                     android:id="@+id/ivSetPh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    app:srcCompat="@drawable/phupdown" />
+                    app:srcCompat="@drawable/set_ph" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -139,7 +138,7 @@
                 android:layout_margin="4dp"
                 android:gravity="center"
                 android:text="@string/ph"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/hijau"
                 android:textSize="10sp"
                 android:textStyle="bold" />
 
@@ -159,8 +158,8 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/colorGray"
-                app:cardCornerRadius="10dp">
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5dp">
 
                 <ImageView
                     android:id="@+id/ivSetPump"
@@ -177,7 +176,7 @@
                 android:layout_margin="4dp"
                 android:gravity="center"
                 android:text="@string/pump"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@color/hijau"
                 android:textSize="10sp"
                 android:textStyle="bold" />
 
@@ -198,162 +197,13 @@
 
         <ImageView
             android:id="@+id/ivSetting"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_marginEnd="24dp"
             app:layout_constraintBottom_toBottomOf="@+id/tvAppName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tvAppName"
-            app:srcCompat="@drawable/settings" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clAboutUs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout4">
-
-            <TextView
-                android:id="@+id/tvPh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/ph_meter"
-                android:textColor="@android:color/background_dark"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/ivPh"
-                app:layout_constraintTop_toTopOf="@+id/ivPh" />
-
-            <TextView
-                android:id="@+id/Ph"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:text="@string/toolsPh"
-                android:textColor="@android:color/background_dark"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/ivPh"
-                app:layout_constraintTop_toBottomOf="@+id/tvPh" />
-
-            <ImageView
-                android:id="@+id/ivPh"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ph_meter" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
-            app:layout_constraintEnd_toStartOf="@+id/clAboutUs"
-            app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout4">
-
-            <TextView
-                android:id="@+id/tvTemperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/temperature"
-                android:textColor="@android:color/background_dark"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/ivTemperature"
-                app:layout_constraintTop_toTopOf="@+id/ivTemperature" />
-
-            <TextView
-                android:id="@+id/temperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/toolsTempt"
-                android:textColor="@android:color/background_dark"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/ivTemperature"
-                app:layout_constraintStart_toEndOf="@+id/ivTemperature"
-                app:layout_constraintTop_toBottomOf="@+id/tvTemperature" />
-
-            <TextView
-                android:id="@+id/tvCelcius"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="@string/toolsC"
-                android:textColor="@android:color/background_dark"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/temperature"
-                app:layout_constraintTop_toTopOf="@+id/temperature" />
-
-            <ImageView
-                android:id="@+id/ivTemperature"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/temperature" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvCurrentCondition">
-
-            <TextView
-                android:id="@+id/tvPpm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="@string/toolsPpm"
-                android:textColor="@android:color/background_dark"
-                android:textSize="8sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/Nutri"
-                app:layout_constraintStart_toEndOf="@+id/Nutri" />
-
-            <TextView
-                android:id="@+id/tvTNutri"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nutrition"
-                android:textColor="@android:color/background_dark"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/ivNutri"
-                app:layout_constraintTop_toTopOf="@+id/ivNutri" />
-
-            <TextView
-                android:id="@+id/Nutri"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/toolsNutri"
-                android:textColor="@android:color/background_dark"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/ivNutri"
-                app:layout_constraintStart_toEndOf="@+id/ivNutri"
-                app:layout_constraintTop_toBottomOf="@+id/tvTNutri" />
-
-            <ImageView
-                android:id="@+id/ivNutri"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/nutrition" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:srcCompat="@drawable/ic_baseline_settings_24" />
 
         <TextView
             android:id="@+id/tvAppName"
@@ -361,26 +211,26 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="@string/app_name"
-            android:textColor="@android:color/background_dark"
+            android:text="@string/app_hint"
+            android:textColor="@android:color/white"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tvCurrentCondition"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/current_condition"
-            android:textColor="@android:color/background_dark"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAppName" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvCurrentCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/current_condition"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout4" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
@@ -388,7 +238,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/roundedrectangle"
+        android:background="@drawable/shadow"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -399,10 +249,10 @@
             android:id="@+id/ivNutriUp"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivPhUp"
-            app:srcCompat="@drawable/set_nutrition" />
+            app:srcCompat="@drawable/set_nutrition_orange" />
 
         <TextView
             android:id="@+id/tvNutriUp"
@@ -410,7 +260,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/nutri_conditioner"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/hijau"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ivNutriUp"
@@ -433,10 +283,10 @@
             android:id="@+id/ivPhUp"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivWaterHeater"
-            app:srcCompat="@drawable/phupdown" />
+            app:srcCompat="@drawable/set_ph_orange" />
 
         <TextView
             android:id="@+id/tvPhUp"
@@ -444,7 +294,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/ph_conditioner"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/hijau"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ivPhUp"
@@ -467,10 +317,10 @@
             android:id="@+id/ivWaterHeater"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivCoolingFan"
-            app:srcCompat="@drawable/hot_water" />
+            app:srcCompat="@drawable/heater" />
 
         <TextView
             android:id="@+id/tvWaterHeater"
@@ -478,7 +328,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/water_heater"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/hijau"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ivWaterHeater"
@@ -501,7 +351,7 @@
             android:id="@+id/ivCoolingFan"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivMixPump"
             app:srcCompat="@drawable/fan" />
@@ -512,7 +362,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/cooling_fan"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/hijau"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ivCoolingFan"
@@ -535,10 +385,10 @@
             android:id="@+id/ivMixPump"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivWaterPump"
-            app:srcCompat="@drawable/mix_pump" />
+            app:srcCompat="@drawable/recycle" />
 
         <TextView
             android:id="@+id/tvMixpump"
@@ -546,7 +396,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/mix_pump"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/hijau"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ivMixPump"
@@ -580,7 +430,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/water_pump"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/hijau"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/ivWaterPump"
@@ -602,7 +452,7 @@
         <View
             android:id="@+id/view"
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
@@ -616,11 +466,166 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/devices_status"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/hijau"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvPpm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/toolsPpm"
+            android:textColor="@android:color/white"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/Nutri"
+            app:layout_constraintStart_toEndOf="@+id/Nutri" />
+
+        <TextView
+            android:id="@+id/tvTNutri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/nutrition"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivNutri"
+            app:layout_constraintTop_toTopOf="@+id/ivNutri" />
+
+        <TextView
+            android:id="@+id/Nutri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/toolsNutri"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivNutri"
+            app:layout_constraintStart_toEndOf="@+id/ivNutri"
+            app:layout_constraintTop_toBottomOf="@+id/tvTNutri" />
+
+        <ImageView
+            android:id="@+id/ivNutri"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/nutritionicon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout4"
+        app:layout_constraintEnd_toStartOf="@+id/clphMeter"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout4">
+
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivTemperature"
+            app:layout_constraintTop_toTopOf="@+id/ivTemperature" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="5"
+            android:text="@string/toolsTempt"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTemperature"
+            app:layout_constraintStart_toEndOf="@+id/ivTemperature"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemperature" />
+
+        <TextView
+            android:id="@+id/tvCelcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/toolsC"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/temperature"
+            app:layout_constraintTop_toTopOf="@+id/temperature" />
+
+        <ImageView
+            android:id="@+id/ivTemperature"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/temperature" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clphMeter"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout5">
+
+        <TextView
+            android:id="@+id/tvPh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/ph_meter"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivPh"
+            app:layout_constraintTop_toTopOf="@+id/ivPh" />
+
+        <TextView
+            android:id="@+id/Ph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/toolsPh"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivPh"
+            app:layout_constraintTop_toBottomOf="@+id/tvPh" />
+
+        <ImageView
+            android:id="@+id/ivPh"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/phicon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -628,14 +633,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.41" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <ProgressBar
         android:id="@+id/progressBarMain"

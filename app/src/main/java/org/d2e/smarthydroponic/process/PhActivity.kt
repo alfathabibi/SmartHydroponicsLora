@@ -7,6 +7,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_ph.*
 import org.d2e.smarthydroponic.R
+import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.*
 
 class PhActivity : AppCompatActivity() {
 
@@ -22,7 +25,9 @@ class PhActivity : AppCompatActivity() {
         val viewModel = ViewModelProvider(this).get(PhViewModel::class.java)
 
         viewModel.data.observe(this, Observer {
-            tvCurrentPh.text = getString(R.string.current_ph_set, it.command.phSet)
+
+            tvSetPh.text = getString(R.string.current_ph_set, it.command.phSet.toString())
+            tvCurrentPh.text = getString(R.string.current_ph, it.status.phValue.toString())
         })
 
         cvBtnSetpH.setOnClickListener {

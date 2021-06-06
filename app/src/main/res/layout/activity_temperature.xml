@@ -26,7 +26,7 @@
             android:layout_marginEnd="16dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="@color/colorGray"
+            app:cardBackgroundColor="@android:color/white"
             app:cardCornerRadius="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/tvCelciusTemperature2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
             android:layout_marginEnd="16dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="@color/colorGray"
+            app:cardBackgroundColor="@android:color/white"
             app:cardCornerRadius="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/tvCelciusTemperature"
             app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/toolsC"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/etMaxTemperature"
@@ -138,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="@string/toolsC"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/etMinTemperature"
@@ -152,7 +152,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/min_temperature"
-            android:textColor="@color/hitam"
+            android:textColor="@android:color/white"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -164,7 +164,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/max_temperature"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -190,12 +190,26 @@
         android:lineSpacingExtra="4sp"
         android:text="@string/set_temperature"
         android:textAlignment="center"
-        android:textColor="@color/hitam"
+        android:textColor="@color/hijau"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tvSetTemperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:lineSpacingExtra="4sp"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        tools:text="@string/current_temperature" />
 
     <TextView
         android:id="@+id/tvCurrentTemperature"
@@ -204,23 +218,24 @@
         android:layout_marginBottom="8dp"
         android:lineSpacingExtra="4sp"
         android:textAlignment="center"
-        android:textColor="@color/hitam"
+        android:textColor="@color/orange"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout2" />
+        app:layout_constraintBottom_toTopOf="@+id/tvSetTemperature"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        tools:text="@string/current_temperature" />
 
     <TextView
         android:id="@+id/tvDescTemp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:lineSpacingExtra="4sp"
         android:text="@string/temperature_t"
         android:textAlignment="center"
-        android:textColor="@color/hitam"
+        android:textColor="@color/hijau"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleTemp" />
@@ -229,10 +244,10 @@
         android:id="@+id/imageView"
         android:layout_width="192dp"
         android:layout_height="192dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/tvCurrentTemperature"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/set_temperature" />
+        app:srcCompat="@drawable/set_temperature_orange" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,10 +15,11 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.d2e.smarthydroponic.data.Device
 
-class FilterViewModel : ViewModel() {
+class ChangeDevIdViewModel : ViewModel() {
     private val firebaseAuth = FirebaseAuth.getInstance()
     private val databaseReference = FirebaseDatabase.getInstance()
     private var _deviceId = MutableLiveData<String>()
+    private var _data = MutableLiveData<Device>()
 
     init {
         getDeviceId()
@@ -31,6 +32,21 @@ class FilterViewModel : ViewModel() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val devId = snapshot.getValue<String>()
                 _deviceId.value = devId
+                getDeviceData(devId)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
+    }
+
+    private fun getDeviceData(devId : String?){
+        databaseReference.getReference("devices/$devId").addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val device = snapshot.getValue<Device>()
+                _data.value = device
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -49,4 +65,5 @@ class FilterViewModel : ViewModel() {
     }
 
     val deviceId : LiveData<String> get() = _deviceId
+    val data : LiveData<Device> get() = _data
 }

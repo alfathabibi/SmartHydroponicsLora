@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_setting.*
+import org.apache.http.params.HttpParams
 import org.d2e.smarthydroponic.auth.ChangeDevIdActivity
 import org.d2e.smarthydroponic.auth.LoginActivity
 import java.lang.Exception
@@ -74,16 +75,17 @@ class SettingActivity : AppCompatActivity() {
         }
 
         clHelp.setOnClickListener {
-            val intent = Intent(Intent.ACTION_SEND)
+
             val recepients = "d23team2021@gmail.com"
             val cc = "alfath.abibi@gmail.com"
-            intent.data = Uri.parse("mailto:")
-            intent.type = "message/rfc822"
-
-            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(recepients))
-            intent.putExtra(Intent.EXTRA_CC, arrayOf(cc))
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Help From User Moura")
-            intent.putExtra(Intent.EXTRA_TEXT, "")
+            val intent = Intent(Intent.ACTION_SEND).apply{
+                type = "text/plain"
+                putExtra(Intent.EXTRA_EMAIL, arrayOf(recepients)) // recipients
+                putExtra(Intent.EXTRA_CC, arrayOf(cc))
+                putExtra(Intent.EXTRA_SUBJECT, "Help From User Moura")
+                putExtra(Intent.EXTRA_TEXT, " ")
+                putExtra(Intent.EXTRA_STREAM, Uri.parse("content://path/to/email/attachment"))
+            }
 
             try{
                 startActivity(Intent.createChooser(intent, "Choose Email Client..."))
@@ -91,6 +93,11 @@ class SettingActivity : AppCompatActivity() {
                 Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
             }
 
+        }
+        clAboutUs.setOnClickListener {
+            Intent(this, AboutusActivity::class.java).also {
+                startActivity(it)
+            }
         }
     }
 }

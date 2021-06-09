@@ -41,7 +41,7 @@
                 android:layout_marginBottom="4dp"
                 android:text="@string/set"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/hijau"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />
@@ -69,7 +69,7 @@
                 android:layout_marginBottom="4dp"
                 android:text="@string/set"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"
+                android:textColor="@color/hijau"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view2" />

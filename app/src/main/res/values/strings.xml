@@ -95,5 +95,14 @@
     <string name="device_not_found">(Device not Found)</string>
     <string name="can_update">You can update your ID below</string>
     <string name="change_dev_id">Change Device ID</string>
+    <string name="developer">Developer</string>
+    <string name="icon_licence">Icon Licence</string>
+    <string name="flaticon">Flat Icon</string>
+    <string name="dev1">M Alfath Abibi</string>
+    <string name="dev2">Fachran Setiawan W</string>
+    <string name="emaildev2">farhansetiawan440@gmail.com</string>
+    <string name="emaildev1">alfath.abibi@gmail.com</string>
+    <string name="app_version">App Version</string>
+    <string name="app_ver">1.0</string>
 
 </resources>
